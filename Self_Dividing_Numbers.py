@@ -1,18 +1,14 @@
-n=int(input())
-m=int(input())
-s=0
-count=0
-for i in range(n,m+1):
-    s=i
+a=int(input())
+b=int(input())
+for i in range(a,b+1):
+    temp=i
     c=0
-    while i:
-        r=i%10
-        if r==0:
-            i=i//10
-            continue
-        if s%r==0:
+    d=0
+    while temp%10!=0:
+        rem=temp%10
+        temp//=10
+        if i%rem==0:
             c+=1
-        i=i//10
-    if len(str(s))==c:
-        print(s,end=" ")
-    
+        d+=1
+    if c==d and i%10!=0:
+        print(i,end=' ')
