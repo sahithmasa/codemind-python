@@ -14,4 +14,3 @@ for i in range(1,n):
         c+=1
 if c<2:
     print('-1')
-        
